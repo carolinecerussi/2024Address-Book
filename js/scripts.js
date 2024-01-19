@@ -39,3 +39,22 @@ function Contact (firstName, lastName, phoneNumber) {
 Contact.prototype.fullName = function () {
   return this.firstName + ' ' + this.lastName;
 };
+
+
+//ui logic 
+let addressBook = new AddressBook();
+function handleForm(event){
+  event.preventDefault();
+  const inputtedFirstName = document.querySelector("input#new-first-name").value;
+  const inputtedLastName = document.querySelector ('input#new-last-name').value;
+  const inputtedPhoneNumber = document.querySelector ('input#new-phone-number').value;
+let newContact = new Contact(inputtedFirstName,inputtedLastName,inputtedPhoneNumber);
+addressBook.addContact(newContact);
+console.log(addressBook.contacts);
+
+}
+
+window.addEventListener ('load', function () {
+  document
+    .querySelector ('form#new-contact-form').addEventListener ('submit', handleForm);
+});

@@ -12,6 +12,32 @@
 </head>
 <body>
   <h1>Address Book</h1>
+  <br/>
+  <h2>Add A Contact:</h2>
+<br />
+<form id="new-contact-form">
+  <label for ="new-first-name">First Name:</label>
+  <input type="text" id="new-first-name" name="new-first-name">
+  <br />
+    <label for ="new-last-name">Last Name:</label>
+  <input type="text" id="new-last-name" name="new-last-name">
+  <br />
+    <label for ="new-phone-number">Phone Number:</label>
+  <input type="text" id="new-phone-number" name="new-phone-number">
+  <br />
+      <button type="submit">Add</button>
 
+</form>
+
+<h2>Contacts:</h2>
+<div id="contacts"></div>
+
+<div id="contact-details" class="hidden" id="hidden-contact-information">
+  <p>First Name: <span id="first-name" ></span></p>
+  <br />
+    <p>Last Name: <span id="last-name" ></span></p>
+    <br />
+      <p>Phone Number: <span id="phone-number" ></span></p>
+</div>
 </body>
 </html>
